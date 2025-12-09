@@ -13,7 +13,7 @@ export const features: Feature[] = [
     description: "Digital transformation, cybersecurity, enterprise solutions.",
     image: "/technology.webp",
     gradient: "from-blue-600/90 via-blue-700/50 to-transparent",
-    href: "https://q-das.vercel.app/", // Replace with original URL
+    href: "https://qdasglobal.com",
     external: true,
   },
   {
@@ -22,7 +22,7 @@ export const features: Feature[] = [
     image: "/energy.webp",
     gradient: "from-orange-600/90 via-yellow-500/50 to-transparent",
     href: "#", // Replace with original URL
-    external: true,
+    external: false,
   },
   {
     title: "Infrastructure",
@@ -30,6 +30,6 @@ export const features: Feature[] = [
     image: "/infrastructure.webp",
     gradient: "from-emerald-800/90 via-green-600/50 to-transparent",
     href: "#", // Replace with original URL
-    external: true,
+    external: false,
   },
 ];
