@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F8F9FA] py-16 sm:py-24 md:py-32">
+    <section className="relative w-full overflow-hidden bg-[#0B0F19] py-16 sm:py-24 md:py-32">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
         <div className="grid items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Left Column: Typography & Narrative */}
@@ -16,18 +16,22 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative z-10"
           >
-            <div className="mb-6 inline-block border-b border-slate-300 pb-2">
-              <span className="text-sm font-bold tracking-widest text-slate-900 uppercase">
+            <div className="relative mb-6 inline-block pb-2">
+              <span className="text-sm font-bold tracking-widest text-slate-400 uppercase">
                 Our Narrative
               </span>
+              <div className="absolute bottom-0 left-0 h-0.5 w-full bg-linear-to-r from-blue-500 via-orange-500 to-emerald-500" />
             </div>
 
-            <h2 className="mb-6 font-sans text-3xl leading-[1.1] font-bold text-slate-900 sm:mb-8 sm:text-4xl md:text-6xl lg:text-7xl">
+            <h2 className="mb-6 font-sans text-3xl leading-[1.1] font-bold text-white sm:mb-8 sm:text-4xl md:text-6xl lg:text-7xl">
               Defining the <br />
-              <span className="text-slate-400 italic">shape</span> of tomorrow.
+              <span className="bg-linear-to-r from-blue-400 via-orange-400 to-emerald-400 bg-clip-text text-transparent italic">
+                shape
+              </span>{" "}
+              of tomorrow.
             </h2>
 
-            <div className="space-y-4 text-base leading-relaxed text-slate-600 sm:space-y-6 sm:text-lg">
+            <div className="space-y-4 text-base leading-relaxed text-slate-400 sm:space-y-6 sm:text-lg">
               <p>
                 We are a collective of forward-thinkers, engineers, and
                 strategists united by a single ambition: to build the
@@ -42,25 +46,25 @@ export default function AboutSection() {
 
             <div className="mt-8 flex flex-wrap items-center gap-6 sm:mt-12 sm:gap-8">
               <div className="group cursor-pointer">
-                <p className="text-2xl font-bold text-slate-900 transition-colors group-hover:text-blue-600 sm:text-3xl">
+                <p className="text-2xl font-bold text-white transition-colors group-hover:text-blue-400 sm:text-3xl">
                   Global
                 </p>
                 <p className="text-xs font-medium text-slate-500 sm:text-sm">
                   Perspective
                 </p>
               </div>
-              <div className="h-8 w-px bg-slate-400 sm:h-12"></div>
+              <div className="h-12 w-0.5 bg-linear-to-b from-blue-500 to-orange-500 sm:h-16"></div>
               <div className="group cursor-pointer">
-                <p className="text-2xl font-bold text-slate-900 transition-colors group-hover:text-blue-600 sm:text-3xl">
+                <p className="text-2xl font-bold text-white transition-colors group-hover:text-orange-400 sm:text-3xl">
                   Local
                 </p>
                 <p className="text-xs font-medium text-slate-500 sm:text-sm">
                   Mastery
                 </p>
               </div>
-              <div className="h-8 w-px bg-slate-400 sm:h-12"></div>
+              <div className="h-12 w-0.5 bg-linear-to-b from-orange-500 to-emerald-500 sm:h-16"></div>
               <div className="group cursor-pointer">
-                <p className="text-2xl font-bold text-slate-900 transition-colors group-hover:text-blue-600 sm:text-3xl">
+                <p className="text-2xl font-bold text-white transition-colors group-hover:text-emerald-400 sm:text-3xl">
                   Future
                 </p>
                 <p className="text-xs font-medium text-slate-500 sm:text-sm">
@@ -89,7 +93,7 @@ export default function AboutSection() {
             </div>
 
             {/* Secondary Image (Overlapping) */}
-            <div className="absolute bottom-0 left-0 h-[200px] w-[55%] overflow-hidden rounded-tl-4xl rounded-br-4xl border-4 border-[#F8F9FA] sm:h-[250px] sm:w-[60%] sm:rounded-tl-[2.5rem] sm:rounded-br-[2.5rem] sm:border-6 md:h-[300px] md:rounded-tl-[3rem] md:rounded-br-[3rem] md:border-8">
+            <div className="absolute bottom-0 left-0 h-[200px] w-[55%] overflow-hidden rounded-tl-4xl rounded-br-4xl border-4 border-t-0 border-r-0 border-b-4 border-l-0 border-slate-200 sm:h-[250px] sm:w-[60%] sm:rounded-tl-[2.5rem] sm:rounded-br-[2.5rem] sm:border-6 md:h-[300px] md:rounded-tl-[3rem] md:rounded-br-[3rem] md:border-8">
               <Image
                 src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=2070&auto=format&fit=crop"
                 alt="Abstract Detail"

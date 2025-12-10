@@ -36,7 +36,11 @@ export default function Hero() {
               className="animate-fade-in-up font-sans text-4xl leading-[1.1] font-semibold text-white opacity-0 [animation-delay:400ms] md:text-7xl lg:text-8xl"
               style={{ animationFillMode: "forwards" }}
             >
-              Building Africa's Digital, Energy & Infrastructure Future.
+              Building Africa's Digital, Energy & Infrastructure{" "}
+              <span className="bg-linear-to-r from-blue-400 via-orange-400 to-emerald-400 bg-clip-text text-transparent">
+                Future
+              </span>
+              .
             </h1>
           </main>
 

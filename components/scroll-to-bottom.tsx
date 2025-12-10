@@ -40,8 +40,8 @@ export default function ScrollToBottom({ className }: ScrollToBottomProps) {
           className="absolute inset-0 rounded-full"
           style={{
             background:
-              "linear-gradient(to right, rgba(119, 196, 28, 0.3) 0%, rgba(207, 79, 145, 0.3) 29%, rgba(0, 106, 206, 0.3) 46%, rgba(246, 171, 42, 0.3) 69%)",
-            mixBlendMode: "color",
+              "linear-gradient(to right, rgba(59, 130, 246, 0.3) 0%, rgba(251, 146, 60, 0.3) 50%, rgba(16, 185, 129, 0.3) 100%)",
+            mixBlendMode: "color-dodge",
           }}
         />
       </div>
@@ -56,8 +56,16 @@ export default function ScrollToBottom({ className }: ScrollToBottomProps) {
             id="circlePath"
             d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
           />
+          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#3b82f6" />
+            <stop offset="50%" stopColor="#fb923c" />
+            <stop offset="100%" stopColor="#10b981" />
+          </linearGradient>
         </defs>
-        <text className="fill-gray-900 text-sm font-bold tracking-[0.25em] uppercase md:text-base">
+        <text
+          fill="url(#textGradient)"
+          className="text-sm font-bold tracking-[0.25em] uppercase md:text-base"
+        >
           <textPath href="#circlePath">
             SCROLL DOWN TO SEE MORE * SCROLL DOWN TO SEE MORE
           </textPath>
@@ -65,7 +73,10 @@ export default function ScrollToBottom({ className }: ScrollToBottomProps) {
       </svg>
 
       <div className="absolute inset-0 flex items-center justify-center">
-        <HiArrowDown className="h-14 w-14 text-gray-900" />
+        <div className="relative flex items-center justify-center">
+          <div className="absolute h-16 w-16 rounded-full bg-linear-to-br from-blue-500/20 via-orange-500/20 to-emerald-500/20 blur-md transition-all group-hover:blur-lg" />
+          <HiArrowDown className="relative h-14 w-14 text-gray-900 transition-transform group-hover:scale-110" />
+        </div>
       </div>
     </button>
   );

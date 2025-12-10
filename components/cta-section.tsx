@@ -24,8 +24,13 @@ export default function CTASection() {
           className="object-cover"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-slate-900/90 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent" />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-[#0B0F19]/90 mix-blend-multiply" />
+        {/* Tricolor Atmosphere */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,var(--tw-gradient-stops))] from-blue-600/40 via-transparent to-transparent opacity-40 mix-blend-screen" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-orange-600/30 via-transparent to-transparent opacity-40 mix-blend-screen" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,var(--tw-gradient-stops))] from-emerald-600/40 via-transparent to-transparent opacity-40 mix-blend-screen" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0B0F19] via-[#0B0F19]/50 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6">
@@ -39,10 +44,10 @@ export default function CTASection() {
         >
           <div className="group relative">
             {/* Subtle glow effect */}
-            <div className="absolute -inset-1 rounded-full bg-blue-500/10 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="absolute -inset-1 rounded-full bg-linear-to-r from-blue-500/10 via-orange-500/10 to-emerald-500/10 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
 
             {/* Main badge */}
-            <div className="relative flex items-center gap-2 rounded-full border border-white/10 bg-slate-800/40 px-3 py-2 backdrop-blur-md sm:gap-2.5 sm:px-5 sm:py-2.5">
+            <div className="relative flex items-center gap-2 rounded-full border border-white/10 bg-[#0B0F19]/40 px-3 py-2 backdrop-blur-md sm:gap-2.5 sm:px-5 sm:py-2.5">
               <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500/10 sm:h-6 sm:w-6">
                 <FaGlobeAfrica className="h-3 w-3 text-blue-400 sm:h-3.5 sm:w-3.5" />
               </div>
@@ -52,7 +57,7 @@ export default function CTASection() {
                 </span>
                 <span className="sm:hidden">Vision, Strategy, Execution</span>
               </span>
-              <div className="h-1 w-1 shrink-0 animate-pulse rounded-full bg-blue-400" />
+              <div className="h-1 w-1 shrink-0 animate-pulse rounded-full bg-linear-to-r from-blue-400 via-orange-400 to-emerald-400" />
             </div>
           </div>
         </motion.div>
@@ -66,10 +71,10 @@ export default function CTASection() {
         >
           Ready to activate your vision <br className="hidden md:block" />
           with{" "}
-          <span className="relative inline-block text-blue-400">
+          <span className="relative inline-block bg-linear-to-r from-blue-400 via-orange-400 to-emerald-400 bg-clip-text text-transparent">
             global precision?
             {/* Underline Highlight */}
-            <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-linear-to-r from-transparent via-blue-500 to-transparent md:-bottom-2 md:h-1" />
+            <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-linear-to-r from-blue-500 via-orange-500 to-emerald-500 md:-bottom-2 md:h-1" />
           </span>
         </motion.h2>
 
@@ -96,17 +101,19 @@ export default function CTASection() {
         >
           <Link
             href="#divisions"
-            className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-white px-6 py-3.5 font-sans text-sm font-bold text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-50 hover:shadow-lg hover:shadow-blue-500/20 sm:w-auto sm:min-w-[200px] sm:px-8 sm:py-4 sm:text-base"
+            className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-white px-6 py-3.5 font-sans text-sm font-bold text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20 sm:w-auto sm:min-w-[200px] sm:px-8 sm:py-4 sm:text-base"
           >
-            Start Your Project
-            <FiArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <div className="absolute inset-0 bg-linear-to-r from-blue-50 via-orange-50 to-emerald-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <span className="relative">Start Your Project</span>
+            <FiArrowRight className="relative ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           <a
             href={`mailto:${COMPANY.email}`}
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3.5 font-sans text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/10 sm:w-auto sm:min-w-[200px] sm:px-8 sm:py-4 sm:text-base"
+            className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-lg border border-white/20 bg-white/5 px-6 py-3.5 font-sans text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 sm:w-auto sm:min-w-[200px] sm:px-8 sm:py-4 sm:text-base"
           >
-            <FiMessageSquare className="h-4 w-4 text-slate-300 group-hover:text-white sm:h-5 sm:w-5" />
-            Contact Support
+            <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 via-orange-500/10 to-emerald-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <FiMessageSquare className="relative h-4 w-4 text-slate-300 transition-colors group-hover:text-white sm:h-5 sm:w-5" />
+            <span className="relative">Contact Support</span>
           </a>
         </motion.div>
 
@@ -123,13 +130,13 @@ export default function CTASection() {
             <span className="whitespace-nowrap">Secure & Verified</span>
           </div>
           <div className="flex items-center gap-1.5 text-xs font-medium text-slate-400 sm:gap-2 sm:text-sm">
-            <FiAward className="h-4 w-4 shrink-0 text-blue-400 sm:h-5 sm:w-5" />
+            <FiAward className="h-4 w-4 shrink-0 text-orange-400 sm:h-5 sm:w-5" />
             <span className="whitespace-nowrap">
               Trusted by Industry Leaders
             </span>
           </div>
           <div className="flex items-center gap-1.5 text-xs font-medium text-slate-400 sm:gap-2 sm:text-sm">
-            <FaGlobeAfrica className="h-4 w-4 shrink-0 text-blue-400 sm:h-5 sm:w-5" />
+            <FaGlobeAfrica className="h-4 w-4 shrink-0 text-emerald-400 sm:h-5 sm:w-5" />
             <span className="whitespace-nowrap">Pan-African Reach</span>
           </div>
         </motion.div>
