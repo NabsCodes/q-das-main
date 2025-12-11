@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { features } from "@/lib/data";
+import { ArrowRight } from "lucide-react";
 
 export default function FeatureCards() {
   return (
@@ -65,12 +66,18 @@ export default function FeatureCards() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 w-full p-8 text-white">
-                <h2 className="mb-2 translate-y-0 transform text-3xl font-bold transition-transform duration-500 group-hover:-translate-y-2 md:text-4xl">
+                <h2 className="mb-2 -translate-y-2 transform text-3xl font-bold transition-transform duration-500 md:translate-y-0 md:text-4xl md:group-hover:-translate-y-2">
                   {feature.title}
                 </h2>
-                <p className="max-w-xs translate-y-4 transform text-sm leading-relaxed font-medium opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 md:text-base">
+                <p className="max-w-xs translate-y-0 text-sm leading-relaxed font-medium opacity-100 transition-all duration-500 md:translate-y-4 md:text-base md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                   {feature.description}
                 </p>
+
+                {/* Mobile-only CTA */}
+                <div className="mt-4 flex items-center gap-2 text-sm font-medium text-white/80 md:hidden">
+                  <span>Explore</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
               </div>
             </>
           );
